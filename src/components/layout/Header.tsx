@@ -26,8 +26,6 @@ export default function Header({ isSidebarOpen, onMenuClick }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.leftSection}>
-        <BurgerMenu isOpen={isSidebarOpen} handleOpen={onMenuClick} />
-        
         <div className={styles.searchContainer}>
           <p className={styles.breadcrumbs}>Dashboard / <span className={styles.current}>Overview</span></p>
         </div>
@@ -45,6 +43,8 @@ export default function Header({ isSidebarOpen, onMenuClick }: HeaderProps) {
         >
           {mounted && theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
         </button>
+
+        <BurgerMenu isOpen={isSidebarOpen} handleOpen={onMenuClick} />
       </div>
     </header>
   );

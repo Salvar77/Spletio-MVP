@@ -2,25 +2,31 @@
   width: 260px;
   height: 100vh;
   background-color: var(--sidebar-bg);
-  border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   position: fixed;
   top: 0;
-  left: 0;
-  overflow-y: auto;
   z-index: 50;
-
-  /* Mobile First: Domyślnie schowany poza ekranem */
-  transform: translateX(-100%);
   transition: transform 0.3s ease;
+
+  /* Mobile First: Przyklejony do prawej i schowany poza prawą krawędzią ekranu */
+  right: 0;
+  left: auto;
+  border-left: 1px solid var(--border-color);
+  border-right: none;
+  transform: translateX(100%);
 
   &.open {
     transform: translateX(0);
   }
 
   @media (min-width: 768px) {
-    transform: translateX(0); /* Zawsze widoczny na desktopie */
+    /* Desktop: Zawsze widoczny na lewej stronie! */
+    left: 0;
+    right: auto;
+    border-right: 1px solid var(--border-color);
+    border-left: none;
+    transform: translateX(0); 
   }
 }
 
