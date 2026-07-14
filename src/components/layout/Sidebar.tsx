@@ -85,9 +85,9 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
       </nav>
 
       <div className={styles.userProfile}>
-        <div className={styles.avatar}>KA</div>
+        <div className={styles.avatar}>A</div>
         <div className={styles.userInfo}>
-          <p className={styles.name}>Konrad A.</p>
+          <p className={styles.name}>Admin A.</p>
           <p className={styles.role}>Admin</p>
         </div>
       </div>

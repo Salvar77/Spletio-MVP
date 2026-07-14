@@ -1,0 +1,93 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  .title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--foreground);
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: var(--foreground);
+    opacity: 0.6;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile first: 1 kolumna */
+  gap: 24px;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr); /* Tablet: 2 kolumny */
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 kolumny */
+  }
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 2fr 1fr; /* Proporcje np. wykres vs aktywność */
+  }
+}
+
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholderChart {
+  background-color: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--foreground);
+    margin-bottom: 24px;
+  }
+
+  .chartArea {
+    flex: 1;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    background-color: var(--hover-bg);
+
+    p {
+      color: var(--foreground);
+      opacity: 0.5;
+      font-size: 1.4rem;
+      max-width: 400px;
+      line-height: 1.6;
+    }
+  }
+}
