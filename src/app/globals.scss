@@ -11,13 +11,13 @@
 }
 
 .dark {
-  --background: #{$new-black};
-  --foreground: #{$white-smooth};
-  --sidebar-bg: #{$black-200};
-  --border-color: #{$grey-smooth-3};
-  --primary: #{$main-color};
-  --primary-hover: #{$gold-main};
-  --hover-bg: #{$tertiary-color};
+  --background: #09090b; /* Zinc 950 - Głęboka, czysta czerń SaaSowa */
+  --sidebar-bg: #18181b; /* Zinc 900 - Tło kart i paska bocznego */
+  --border-color: #27272a; /* Zinc 800 - Delikatne odcięcie */
+  --foreground: #fafafa; /* Zinc 50 - Czysty biały tekst */
+  --primary: #6366f1; /* Indigo 500 - Nowoczesny fioletowo-niebieski akcent */
+  --primary-hover: #4f46e5; /* Indigo 600 - Tło dla ikon na kartach */
+  --hover-bg: #27272a; /* Zinc 800 - Subtelny hover w menu */
 }
 
 *,
