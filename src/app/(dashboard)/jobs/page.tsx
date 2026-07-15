@@ -1,4 +1,5 @@
 import { Plus, Search, Filter } from "lucide-react";
+import Link from "next/link";
 import JobsList from "@/components/jobs/JobsList";
 import styles from "./page.module.scss";
 
@@ -11,10 +12,10 @@ export default function JobsPage() {
           <p className={styles.subtitle}>Zarządzaj swoimi rekrutacjami, do których AI dopasowuje kandydatów.</p>
         </div>
         
-        <button className={styles.primaryButton}>
+        <Link href="/jobs/new" className={styles.primaryButton}>
           <Plus size={18} />
           Dodaj Ofertę
-        </button>
+        </Link>
       </header>
 
       <div className={styles.toolbar}>

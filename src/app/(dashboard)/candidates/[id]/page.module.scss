@@ -155,6 +155,13 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 24px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+    border-color: rgba(16, 185, 129, 0.3);
+  }
 }
 
 .scoreCard {
@@ -166,6 +173,12 @@
   padding: 24px;
   margin-bottom: 32px;
   border-left: 4px solid var(--success-solid);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateX(4px); /* Lekkie przesunięcie w prawo z racji border-left */
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.1);
+  }
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -243,12 +256,25 @@
         border-radius: 6px;
         font-size: 1.3rem;
         font-weight: 500;
+        transition: all 0.2s ease;
+        cursor: default;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
       }
 
       .tagHard {
         background-color: var(--hover-bg);
         border: 1px solid var(--border-color);
         color: var(--primary);
+
+        &:hover {
+          background-color: var(--primary);
+          color: #ffffff;
+          border-color: var(--primary);
+        }
       }
 
       .tagSoft {
@@ -256,6 +282,12 @@
         border: 1px dashed var(--border-color);
         color: var(--foreground);
         opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+          background-color: var(--hover-bg);
+          border-style: solid;
+        }
       }
     }
   }
